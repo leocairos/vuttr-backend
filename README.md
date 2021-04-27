@@ -219,19 +219,19 @@ Resposta:
 {}
 ```
 
-## Rodmap
+## Roadmap
 
-**O mínimo necessário**
-- [ ] Uma aplicação contendo uma API real simples, sem autenticação, que atenda os requisitos descritos abaixo, fazendo requisições à um banco de dados para persistência;
-- [ ] README.md contendo informações básicas do projeto e como executá-lo;
+**Básico**
+- [X] Uma aplicação contendo uma API real simples, sem autenticação, que atenda os requisitos descritos abaixo, fazendo requisições à um banco de dados para persistência;
+- [X] README.md contendo informações básicas do projeto e como executá-lo;
 - [ ] API Blueprint ou Swagger da aplicação
 
 **Bônus**
-- [ ] Uso de ferramentas externas que facilitem o seu trabalho;
-- [ ] Cuidados especiais com otimização, padrões, entre outros;
-- [ ] Migrations ou script para configuração do banco de dados utilizado;
-- [ ] Testes (unitários, integração);
-- [ ] Conteinerização da aplicação;
+- [X] Uso de ferramentas externas que facilitem o seu trabalho;
+- [X] Cuidados especiais com otimização, padrões, entre outros;
+- [X] Migrations ou script para configuração do banco de dados utilizado;
+- [X] Testes (unitários, integração);
+- [X] Conteinerização da aplicação;
 - [ ] Autenticação e autorização (OAuth, JWT);
 - [ ] Pipelines de CI/CD (GitLab, CircleCI, TravisCI, etc);
 - [ ] Deploy em ambientes reais, utilizando serviços de cloud externos (AWS, Heroku, GCP, etc);
