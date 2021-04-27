@@ -15,7 +15,7 @@ class Tool {
   @Column()
   description: string;
 
-  @Column()
+  @Column('simple-array')
   tags: string;
 
   constructor() {

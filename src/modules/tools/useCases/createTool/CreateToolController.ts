@@ -8,8 +8,13 @@ class CreateToolController {
     const { title, link, description, tags } = request.body;
 
     const createToolUseCase = container.resolve(CreateToolUseCase);
-    await createToolUseCase.execute({ title, link, description, tags });
-    return response.status(201).send();
+    const tool = await createToolUseCase.execute({
+      title,
+      link,
+      description,
+      tags,
+    });
+    return response.status(201).json(tool);
   }
 }
 

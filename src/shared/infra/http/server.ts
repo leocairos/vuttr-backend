@@ -9,6 +9,8 @@ import '@shared/container';
 import { AppError } from '@shared/errors/AppError';
 import { router } from '@shared/infra/http/routes';
 
+import path from 'path';
+
 import swaggerFile from '../../../swagger.json';
 
 const app = express();
@@ -18,8 +20,12 @@ app.use(express.json());
 const options = {
   customCss: '.swagger-ui .topbar { display: none }',
   customSiteTitle: 'VUTRR API',
-  customfavIcon: '/assets/favicon.ico',
+  customfavIcon: '/static/favicon.ico',
 };
+
+const pathPublic = path.resolve(__dirname, '..', '..', '..', 'public');
+
+app.use('/static', express.static(pathPublic));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile, options));
 

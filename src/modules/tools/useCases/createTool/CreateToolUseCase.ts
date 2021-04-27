@@ -18,6 +18,7 @@ class CreateToolUseCase {
   ) {}
 
   async execute({ title, link, description, tags }: IRequest): Promise<Tool> {
+    // const tagsArray = tags.split(' ');
     const tool = await this.toolsRepository.create({
       title,
       link,

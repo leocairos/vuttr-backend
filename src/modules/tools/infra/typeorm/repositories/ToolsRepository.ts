@@ -1,4 +1,4 @@
-import { getRepository, Repository } from 'typeorm';
+import { getRepository, Like, Repository } from 'typeorm';
 
 import { Tool } from '@modules/tools/infra/typeorm/entities/Tool';
 import {
@@ -36,7 +36,9 @@ class ToolsRepository implements IToolsRepository {
   }
 
   async findByTag(tag: string): Promise<Tool[]> {
-    const tools = await this.repository.find({ tags: tag });
+    const tools = await this.repository.find({
+      where: { tags: Like(`%${tag}%`) },
+    });
     return tools;
   }
 
