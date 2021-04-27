@@ -1,17 +1,20 @@
 import { ToolsRepositoryInMemory } from '@modules/tools/repositories/in-memory/ToolsRepositoryInMemory';
 
-import { CreateToolUseCase } from './CreateToolUseCase';
+import { CreateToolUseCase } from '../createTool/CreateToolUseCase';
+import { RemoveToolsUseCase } from './RemoveToolsUseCase';
 
 let createToolUseCase: CreateToolUseCase;
 let toolsRepositoryInMemory: ToolsRepositoryInMemory;
+let removeToolsUseCase: RemoveToolsUseCase;
 
-describe('Create Tool', () => {
+describe('Remove Tool', () => {
   beforeEach(() => {
     toolsRepositoryInMemory = new ToolsRepositoryInMemory();
     createToolUseCase = new CreateToolUseCase(toolsRepositoryInMemory);
+    removeToolsUseCase = new RemoveToolsUseCase(toolsRepositoryInMemory);
   });
 
-  it('should be able to create a new tool', async () => {
+  it('should be able to remove a tool by id', async () => {
     const tool = {
       title: 'Tool Test',
       link: 'www.tooltest.com',
@@ -26,6 +29,6 @@ describe('Create Tool', () => {
       tags: tool.tags,
     });
 
-    expect(toolCreated).toHaveProperty('id');
+    const result = await removeToolsUseCase.execute(toolCreated.id);
   });
 });

@@ -23,46 +23,31 @@
 
 # VUTTR API
 
-Este repositório contém uma simples API para o desafio de front-end do BossaBox.
-Requisitos:
+This respository has a simple API to BossaBox challenge backend.
 
-* NodeJS v14.16.0+
+Require:
+  * NodeJS v14.16.0+
+  * Docker
+  * vscode
 
-## Como executar
+## How to execute
 
-Faça o clone/download deste repositório, execute `npm install` e `npm dev`. A API fica localizada em `http://localhost:3000`.
-
-### Docker
-
+* Clone this repository
 * Install docker
 * Install Docker Plugin for vscode
 * Update Dockerfile file in root path project
 * Update .dockerignore file in root path project
-
-* Build a docker image file (run in root path project)
+* Build a docker image file (run in root path project):
   ```bash
   docker build -t vuttr .
   ```
+* Update a docker-compose.yml file
+* run compose: $ docker-compose up (with -d to background run)
 
-* DOCKER COMPOSE
-  * Update a docker-compose.yml file
-  * run compose: $ docker-compose up (with -d to background run)
-  * Logs: $ docker logs vuttr
-
-* Commands by docker-compose.yml file:
-  * Create and run app in background mode: docker-compose up -d
-  * Run app only: docker-compose start
-  * Stop container: docker-compose stop
-  * Remover container: docker-compose down
-
-### TypeORM
-
-yarn typeorm migration:run
 
 ## Documentação da API - by [SWAGGER](https://swagger.io/)
 
 Run project and open API Doc in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3000/api-docs)
-
 
 ## Rotas
 
@@ -233,3 +218,28 @@ Resposta:
 // Status: 200 OK
 {}
 ```
+
+## Rodmap
+
+**O mínimo necessário**
+- [ ] Uma aplicação contendo uma API real simples, sem autenticação, que atenda os requisitos descritos abaixo, fazendo requisições à um banco de dados para persistência;
+- [ ] README.md contendo informações básicas do projeto e como executá-lo;
+- [ ] API Blueprint ou Swagger da aplicação
+
+**Bônus**
+- [ ] Uso de ferramentas externas que facilitem o seu trabalho;
+- [ ] Cuidados especiais com otimização, padrões, entre outros;
+- [ ] Migrations ou script para configuração do banco de dados utilizado;
+- [ ] Testes (unitários, integração);
+- [ ] Conteinerização da aplicação;
+- [ ] Autenticação e autorização (OAuth, JWT);
+- [ ] Pipelines de CI/CD (GitLab, CircleCI, TravisCI, etc);
+- [ ] Deploy em ambientes reais, utilizando serviços de cloud externos (AWS, Heroku, GCP, etc);
+- [ ] Sugestões sobre o challenge embasadas em alguma argumentação.
+
+
+## 📝 Licença
+
+Este projeto esta sob a licença MIT.
+
+Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/)!
