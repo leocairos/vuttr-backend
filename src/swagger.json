@@ -1,0 +1,107 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "VUTTR Documentation",
+    "description": "This is an API VUTTR",
+    "version": "1.0.0",
+    "contact": {
+      "email": "dev@rdlsc.com"
+    }
+  },
+  "paths": {
+    "/tools": {
+      "post": {
+        "tags": ["Tool"],
+        "sumary": "Create a tool",
+        "description": "Create a new tool",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "tags": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "title": "Tool title sample",
+                  "link": "www.toollinkexample.com",
+                  "description": "Tool description sample",
+                  "tags": ["tool","example"]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Tool"],
+        "sumary": "List all tools",
+        "description": "List all tools",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "link": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "tags": {
+                        "type": "array"
+                      }
+                    }
+                  },
+                  "example": {
+                    "title": "Tool title sample",
+                    "link": "www.toolexample.com",
+                    "description": "Tool description sample",
+                    "tags": ["Tool","sample"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definations": {
+    "Specification": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
