@@ -51,7 +51,7 @@ Require:
 
 ## API Documentation
 
-Run project and open API Doc in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3000/api-docs)
+Run project and open API Doc in http://localhost:3000/api-docs.
 
 ### Routes
 
