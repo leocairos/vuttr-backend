@@ -39,12 +39,12 @@ Require:
   ```bash
   docker build -t vuttr .
   ```
-* run migrations:
+* Run migrations:
   ```bash
   yarn typeorm migration:run
   ```
 * Update a docker-compose.yml file
-* run compose:
+* Run compose:
   ```bash
   $ docker-compose up (with -d to background run)
   ```
