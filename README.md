@@ -20,7 +20,7 @@
 
 # 🔖 VUTTR API
 
-This respository has a simple API to BossaBox challenge backend.
+This respository has a simple API to BossaBox [bossabox.com] challenge backend.
 
 Require:
   * NodeJS v14.16.0+
