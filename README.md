@@ -18,7 +18,7 @@
 
 </p>
 
-#🔖 VUTTR API
+# 🔖 VUTTR API
 
 This respository has a simple API to BossaBox challenge backend.
 
@@ -27,7 +27,7 @@ Require:
   * Docker
   * yarn (optimal)
 
-##🚀 How to execute
+## 🚀 How to execute
 
 * Clone this repository
 * Install docker
@@ -60,7 +60,7 @@ This API has routes:
 * `DELETE /tools/:id` : Delete a tool by id
 
 
-##💫 Roadmap
+## 💫 Roadmap
 
 **Basic**
 - [X] An application containing a real simple API, without authentication, that meets the requirements described below, making requests to a database for persistence;
@@ -79,7 +79,7 @@ This API has routes:
 - [ ] Suggestions about the challenge based on some argument.
 
 
-##📄 License
+## 📄 License
 
  Code released under the [MIT License](https://github.com/leocairos/vuttr-backend/blob/main/LICENSE).
 
