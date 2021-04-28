@@ -7,7 +7,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/leocairos/vuttr-backend">
 
-  <a href="https://github.com//leocairos/vuttr-backend/commits/master">
+  <a href="https://github.com/leocairos/vuttr-backend/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/leocairos/vuttr-backend">
   </a>
 
@@ -28,218 +28,62 @@ This respository has a simple API to BossaBox challenge backend.
 Require:
   * NodeJS v14.16.0+
   * Docker
-  * vscode
+  * yarn (optimal)
 
 ## How to execute
 
 * Clone this repository
 * Install docker
-* Install Docker Plugin for vscode
 * Update Dockerfile file in root path project
-* Update .dockerignore file in root path project
 * Build a docker image file (run in root path project):
   ```bash
   docker build -t vuttr .
   ```
+* run migrations:
+  ```bash
+  yarn typeorm migration:run
+  ```
 * Update a docker-compose.yml file
-* run compose: $ docker-compose up (with -d to background run)
+* run compose:
+  ```bash
+  $ docker-compose up (with -d to background run)
+  ```
 
-
-## Documentação da API - by [SWAGGER](https://swagger.io/)
+## API Documentation
 
 Run project and open API Doc in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3000/api-docs)
 
-## Rotas
+## Rooutes
 
-Todas as requisições de POST para esta API devem conter o header `Content-Type: application/json`.
-Esta API contém as seguintes rotas:
+This API has routes::
 
-* `GET /tools` : lista as ferramentas cadastradas
-* `POST /tools` : cria uma nova ferramenta
-* `DELETE /tools/:id` : apaga a ferramenta com ID :id
+* `GET /tools` : List all tools
+  * To filter by tag field, use query `?tag=busca`
+* `POST /tools` : Create a new toolcria uma nova ferramenta
+* `DELETE /tools/:id` : Delete a tool by id
 
-Para filtrar as ferramentas em `GET /tools`, é possível:
-* fazer uma busca global utilizando a query string `?q=:busca`;
-* fazer uma busca por tags individuais utilizando a query string `?tags_like=:busca`.
-
-## Exemplos
-
-### GET /tools
-
-Requisição:
-```javascript
-GET /tools
-```
-Resposta:
-```javascript
-[
-    {
-        id: 1,
-        title: "Notion",
-        link: "https://notion.so",
-        description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized. ",
-        tags: [
-            "organization",
-            "planning",
-            "collaboration",
-            "writing",
-            "calendar"
-        ]
-    },
-    {
-        id: 2,
-        title: "json-server",
-        link: "https://github.com/typicode/json-server",
-        description: "Fake REST API based on a json schema. Useful for mocking and creating APIs for front-end devs to consume in coding challenges.",
-        tags: [
-            "api",
-            "json",
-            "schema",
-            "node",
-            "github",
-            "rest"
-        ]
-    },
-    {
-        id: 3,
-        title: "fastify",
-        link: "https://www.fastify.io/",
-        description: "Extremely fast and simple, low-overhead web framework for NodeJS. Supports HTTP2.",
-        tags: [
-            "web",
-            "framework",
-            "node",
-            "http2",
-            "https",
-            "localhost"
-        ]
-    }
-]
-```
-
-### GET /tools?q=:busca
-
-Requisição:
-```javascript
-GET /tools?q=notion
-```
-Resposta:
-```javascript
-[
-    {
-        id: 1,
-        title: "Notion",
-        link: "https://notion.so",
-        description: "All in one tool to organize teams and ideas. Write, plan, collaborate, and get organized. ",
-        tags: [
-            "organization",
-            "planning",
-            "collaboration",
-            "writing",
-            "calendar"
-        ]
-    }
-]
-```
-
-### GET /tools?tags_like=:busca
-
-Requisição:
-```javascript
-GET /tools?tags_like=node
-```
-Resposta:
-```javascript
-[
-    {
-        id: 2,
-        title: "json-server",
-        link: "https://github.com/typicode/json-server",
-        description: "Fake REST API based on a json schema. Useful for mocking and creating APIs for front-end devs to consume in coding challenges.",
-        tags: [
-            "api",
-            "json",
-            "schema",
-            "node",
-            "github",
-            "rest"
-        ]
-    },
-    {
-        id: 3,
-        title: "fastify",
-        link: "https://www.fastify.io/",
-        description: "Extremely fast and simple, low-overhead web framework for NodeJS. Supports HTTP2.",
-        tags: [
-            "web",
-            "framework",
-            "node",
-            "http2",
-            "https",
-            "localhost"
-        ]
-    }
-]
-```
-
-### POST /tools
-
-Requisição:
-```javascript
-// POST /tools
-// Content-Type: application/json
-{
-    "title": "hotel",
-    "link": "https://github.com/typicode/hotel",
-    "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
-    "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"]
-}
-```
-
-Resposta:
-```javascript
-{
-    "title": "hotel",
-    "link": "https://github.com/typicode/hotel",
-    "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
-    "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"],
-    "id":5
-}
-```
-
-### DELETE /tools/:id
-Requisição:
-```javascript
-DELETE /tools/5
-```
-
-Resposta:
-```javascript
-// Status: 200 OK
-{}
-```
 
 ## Roadmap
 
-**Básico**
-- [X] Uma aplicação contendo uma API real simples, sem autenticação, que atenda os requisitos descritos abaixo, fazendo requisições à um banco de dados para persistência;
-- [X] README.md contendo informações básicas do projeto e como executá-lo;
-- [ ] API Blueprint ou Swagger da aplicação
+**Basic**
+- [X] An application containing a real simple API, without authentication, that meets the requirements described below, making requests to a database for persistence;
+- [X] README.md containing basic information about the project and how to execute it;
+- [X] API Blueprint or Swagger of the application
 
-**Bônus**
-- [X] Uso de ferramentas externas que facilitem o seu trabalho;
-- [X] Cuidados especiais com otimização, padrões, entre outros;
-- [X] Migrations ou script para configuração do banco de dados utilizado;
-- [X] Testes (unitários, integração);
-- [X] Conteinerização da aplicação;
-- [ ] Autenticação e autorização (OAuth, JWT);
-- [ ] Pipelines de CI/CD (GitLab, CircleCI, TravisCI, etc);
-- [ ] Deploy em ambientes reais, utilizando serviços de cloud externos (AWS, Heroku, GCP, etc);
-- [ ] Sugestões sobre o challenge embasadas em alguma argumentação.
+**Bonus**
+- [X] Use of external tools to facilitate your work;
+- [X] Special care with optimization, standards, among others;
+- [X] Migrations or script to configure the database used;
+- [X] Tests (unitary, integration);
+- [X] Containerization of the application;
+- [ ] Authentication and authorization (OAuth, JWT);
+- [ ] CI / CD pipelines (GitLab, CircleCI, TravisCI, etc.);
+- [ ] Deploy in real environments, using external cloud services (AWS, Heroku, GCP, etc.);
+- [ ] Suggestions about the challenge based on some argument.
 
 
-## 📝 Licença
+## 📝License
 
-Este projeto esta sob a licença MIT.
+ Code released under the [MIT License](https://github.com/leocairos/vuttr-backend/blob/main/LICENSE).
 
-Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/)!
+Make with ❤️ by [Leonardo Cairo](https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/)!

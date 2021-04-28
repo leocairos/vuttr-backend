@@ -9,6 +9,29 @@
     }
   },
   "paths": {
+    "/tools/{id}":{
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of tool that we want to find",
+          "type": "integer"
+        }
+      ],
+      "delete": {
+        "tags": ["Tool"],
+        "sumary": "Delete a tool by id",
+        "description": "Delete a tool by id",
+        "responses": {
+          "204": {
+            "description": "No content",
+            "content": {
+            }
+          }
+        }
+      }
+    },
     "/tools": {
       "post": {
         "tags": ["Tool"],
@@ -34,10 +57,10 @@
                   }
                 },
                 "example": {
-                  "title": "Tool title sample",
-                  "link": "www.toollinkexample.com",
-                  "description": "Tool description sample",
-                  "tags": ["tool","example"]
+                  "title": "hotel",
+                    "link": "https://github.com/typicode/hotel",
+                    "description": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+                    "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"]
                 }
               }
             }
@@ -50,6 +73,15 @@
         }
       },
       "get": {
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "query",
+            "required": false,
+            "description": "Tag of tool that we want to find",
+            "type": "string"
+          }
+        ],
         "tags": ["Tool"],
         "sumary": "List all tools",
         "description": "List all tools",
@@ -87,19 +119,6 @@
               }
             }
           }
-        }
-      }
-    }
-  },
-  "definations": {
-    "Specification": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
         }
       }
     }
