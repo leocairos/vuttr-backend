@@ -53,9 +53,9 @@ Require:
 
 Run project and open API Doc in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3000/api-docs)
 
-## Rooutes
+### Routes
 
-This API has routes::
+This API has routes:
 
 * `GET /tools` : List all tools
   * To filter by tag field, use query `?tag=busca`
