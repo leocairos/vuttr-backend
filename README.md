@@ -16,12 +16,9 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/leocairos/vuttr-backend?style=social">
   </a>
 
-  <a href="https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue">
-  </a>
 </p>
 
-# VUTTR API
+#🔖 VUTTR API
 
 This respository has a simple API to BossaBox challenge backend.
 
@@ -30,7 +27,7 @@ Require:
   * Docker
   * yarn (optimal)
 
-## How to execute
+##🚀 How to execute
 
 * Clone this repository
 * Install docker
@@ -49,7 +46,7 @@ Require:
   $ docker-compose up (with -d to background run)
   ```
 
-## API Documentation
+## 📖 API Documentation
 
 Run project and open API Doc in http://localhost:3000/api-docs.
 
@@ -63,7 +60,7 @@ This API has routes:
 * `DELETE /tools/:id` : Delete a tool by id
 
 
-## Roadmap
+##💫 Roadmap
 
 **Basic**
 - [X] An application containing a real simple API, without authentication, that meets the requirements described below, making requests to a database for persistence;
@@ -82,7 +79,7 @@ This API has routes:
 - [ ] Suggestions about the challenge based on some argument.
 
 
-## 📝License
+##📄 License
 
  Code released under the [MIT License](https://github.com/leocairos/vuttr-backend/blob/main/LICENSE).
 
