@@ -27,7 +27,7 @@ Require:
   * Docker
   * yarn (optimal)
 
-Demo available in (http://api.vuttr.tk:3000/api-docs/)
+💻 Demo available in http://api.vuttr.tk:3000/api-docs/
 
 ## 🚀 How to execute
 
