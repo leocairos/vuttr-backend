@@ -77,7 +77,7 @@ This API has routes:
 - [X] Containerization of the application;
 - [ ] Authentication and authorization (OAuth, JWT);
 - [ ] CI / CD pipelines (GitLab, CircleCI, TravisCI, etc.);
-- [ ] Deploy in real environments, using external cloud services (AWS, Heroku, GCP, etc.);
+- [X] Deploy in real environments, using external cloud services (AWS, Heroku, GCP, etc.);
 - [ ] Suggestions about the challenge based on some argument.
 
 
