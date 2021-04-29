@@ -27,6 +27,8 @@ Require:
   * Docker
   * yarn (optimal)
 
+Demo available in (http://api.vuttr.tk:3000/api-docs/)
+
 ## 🚀 How to execute
 
 * Clone this repository

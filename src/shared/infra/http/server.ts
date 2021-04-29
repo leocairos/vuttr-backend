@@ -19,7 +19,7 @@ app.use(express.json());
 
 const options = {
   customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: 'VUTRR API',
+  customSiteTitle: 'VUTTR API',
   customfavIcon: '/static/favicon.ico',
 };
 
