@@ -22,7 +22,7 @@
 
 This respository has a simple API to [BossaBox](bossabox.com) challenge backend.
 
-Require:
+Requires:
   * NodeJS v14.16.0+
   * Docker
   * yarn (optimal)
@@ -83,6 +83,6 @@ This API has routes:
 
 ## 📄 License
 
- Code released under the [MIT License](https://github.com/leocairos/vuttr-backend/blob/main/LICENSE).
+Code released under the [MIT License](https://github.com/leocairos/vuttr-backend/blob/main/LICENSE).
 
 Make with ❤️ by [Leonardo Cairo](https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/)!

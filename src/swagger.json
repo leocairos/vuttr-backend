@@ -5,7 +5,7 @@
     "description": "This is an API VUTTR",
     "version": "1.0.0",
     "contact": {
-      "email": "dev@rdlsc.com"
+      "email": "leocairos@gmail.com"
     }
   },
   "paths": {
@@ -16,12 +16,12 @@
           "in": "path",
           "required": true,
           "description": "ID of tool that we want to find",
-          "type": "integer"
+          "type": "string"
         }
       ],
       "delete": {
         "tags": ["Tool"],
-        "sumary": "Delete a tool by id",
+        "summary": "Delete a tool by id",
         "description": "Delete a tool by id",
         "responses": {
           "204": {
@@ -35,7 +35,7 @@
     "/tools": {
       "post": {
         "tags": ["Tool"],
-        "sumary": "Create a tool",
+        "summary": "Create a tool",
         "description": "Create a new tool",
         "requestBody": {
           "content": {
@@ -83,7 +83,7 @@
           }
         ],
         "tags": ["Tool"],
-        "sumary": "List all tools",
+        "summary": "List all tools",
         "description": "List all tools",
         "responses": {
           "200": {
