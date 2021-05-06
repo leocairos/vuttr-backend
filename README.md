@@ -1,6 +1,4 @@
-<h1 align="center">
-    <img alt="VUTTR" title="VUTTR" src="./.github/bossabox.png" />
-</h1>
+# 🔖 VUTTR API
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/leocairos/vuttr-backend?color=%2304D361">
@@ -18,9 +16,8 @@
 
 </p>
 
-# 🔖 VUTTR API
 
-This respository has a simple API to [BossaBox](bossabox.com) challenge backend.
+This repository has a simple API to challenge backend.
 
 Requires:
   * NodeJS v14.16.0+
@@ -57,8 +54,8 @@ Run project and open API Doc in http://localhost:3000/api-docs.
 This API has routes:
 
 * `GET /tools` : List all tools
-  * To filter by tag field, use query `?tag=busca`
-* `POST /tools` : Create a new toolcria uma nova ferramenta
+  * To filter by tag field, use query `?tag=search`
+* `POST /tools` : Create a new tool
 * `DELETE /tools/:id` : Delete a tool by id
 
 
